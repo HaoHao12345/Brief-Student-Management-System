@@ -17,6 +17,7 @@ public class Main_interface {
             // 录入数据
             Scanner sc = new Scanner(System.in);
             String line = sc.nextLine();
+            // switch语句选择操作
             switch (line){
                 case"1":
                     System.out.println("添加学生");
