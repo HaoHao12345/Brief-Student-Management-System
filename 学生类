@@ -1,0 +1,48 @@
+public class Student {
+    private String num; // 学号
+    private String name; // 姓名
+    private String age; // 年龄
+    private String address;// 居住地
+    // 无参构造器
+    public Student() {
+    }
+    // 4参数构造器
+    public Student(String num, String name, String age, String address) {
+        this.num = num;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    // 获取学号
+    public String getNum() {
+        return num;
+    }
+    // 获取姓名
+    public String getName() {
+        return name;
+    }
+    // 获取年龄
+    public String getAge() {
+        return age;
+    }
+    // 获取地址
+    public String getAddress() {
+        return address;
+    }
+    // 设置学号
+    public void setNum(String num) {
+        this.num = num;
+    }
+    // 设置姓名
+    public void setName(String name) {
+        this.name = name;
+    }
+    // 设置年龄
+    public void setAge(String age) {
+        this.age = age;
+    }
+    // 设置地址
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
