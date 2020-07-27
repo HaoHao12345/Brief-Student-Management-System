@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main_interface {
+    public static void main(String[] args) {
+        // 循环判断变量——为true则循环继续，为false则循环停止
+        boolean flag = true;
+        // 用while循环回到主界面
+        while (flag){
+            flag = true;
+            // 用输出语句编写主界面
+            System.out.println("--------欢迎来到学生管理系统--------");
+            System.out.println("1 添加学生");
+            System.out.println("2 查看学生");
+            System.out.println("3 删除学生");
+            System.out.println("4 修改学生");
+            System.out.println("5 退出");
+            System.out.println("请输入将要进行的操作：");
+            // 录入数据
+            Scanner sc = new Scanner(System.in);
+            String line = sc.nextLine();
+            switch (line){
+                case"1":
+                    System.out.println("添加学生");
+                    break;
+                case"2":
+                    System.out.println("查看学生");
+                    break;
+                case"3":
+                    System.out.println("删除学生");
+                    break;
+                case"4":
+                    System.out.println("修改学生");
+                    break;
+                case"5":
+                    System.out.println("谢谢使用");
+                    flag = false;
+                    break;
+            }
+        }
+    }
+}
