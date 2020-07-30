@@ -1,0 +1,22 @@
+    public static void deleteStudent(ArrayList<Student> array){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("请输入待删除的学生的学号：");
+        // 录入待删除的学生的学号
+        String num = sc.nextLine();
+        // 循环判断变量——若遍历完集合对象仍为false表示输入的学号不存在
+        boolean flag = false;
+        // 遍历集合对象，找到输入的学号对应的学生
+        for(int i=0;i<array.size();i++){
+            flag = false;
+            Student ss = array.get(i);
+            if(num.equals(ss.getNum())){
+                array.remove(ss);
+                flag = true;
+                System.out.println("删除成功！");
+                break;
+            }
+            if(flag == false){
+                System.out.println("不存在该学号！");
+            }
+        }
+    }
