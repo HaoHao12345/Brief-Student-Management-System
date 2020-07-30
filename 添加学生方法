@@ -1,0 +1,23 @@
+    public static void addStudent(ArrayList<Student> array){
+        // 录入学生基本数据
+        Scanner sc = new Scanner(System.in);
+        System.out.print("请输入学号：");
+        String num = sc.nextLine();
+        System.out.print("请输入姓名：");
+        String name = sc.nextLine();
+        System.out.print("请输入年龄：");
+        String age = sc.nextLine();
+        System.out.print("请输入居住地：");
+        String address = sc.nextLine();
+        // 创建学生对象
+        Student S = new Student();
+        // 设置学生基本信息
+        S.setNum(num);
+        S.setName(name);
+        S.setAge(age);
+        S.setAddress(address);
+        // 将学生对象添加到集合中
+        array.add(S);
+        // 给出添加成功提示
+        System.out.println("添加成功");
+    }
