@@ -1,10 +1,12 @@
-import java.util.Scanner;
-public class Main_interface {
+import java.util.ArrayList;
+public class StudentManager {
     public static void main(String[] args) {
-        // 循环判断变量——为true则循环继续，为false则循环停止
+        // 创建集合对象，用于存放学生数据
+        ArrayList<Student> stu = new ArrayList<>();
+        // 循环判断变量——为true则继续循环，为false则终止循环
         boolean flag = true;
         // 用while循环回到主界面
-        while (flag){
+        while(flag){
             flag = true;
             // 用输出语句编写主界面
             System.out.println("--------欢迎来到学生管理系统--------");
@@ -13,23 +15,23 @@ public class Main_interface {
             System.out.println("3 删除学生");
             System.out.println("4 修改学生");
             System.out.println("5 退出");
-            System.out.println("请输入将要进行的操作：");
+            System.out.print("请输入将要进行的操作：");
             // 录入数据
             Scanner sc = new Scanner(System.in);
             String line = sc.nextLine();
             // switch语句选择操作
-            switch (line){
+            switch(line){
                 case"1":
-                    System.out.println("添加学生");
+                    addStudent(stu);
                     break;
                 case"2":
-                    System.out.println("查看学生");
+                    showStudent(stu);
                     break;
                 case"3":
-                    System.out.println("删除学生");
+                    deleteStudent(stu);
                     break;
                 case"4":
-                    System.out.println("修改学生");
+                    modifyStudent(stu);
                     break;
                 case"5":
                     System.out.println("谢谢使用");
@@ -38,4 +40,3 @@ public class Main_interface {
             }
         }
     }
-}
