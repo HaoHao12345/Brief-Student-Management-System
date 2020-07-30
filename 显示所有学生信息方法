@@ -1,0 +1,12 @@
+    public static void showStudent(ArrayList<Student> array){
+        if(array.size() == 0){
+            System.out.println("无信息，请先添加学生信息！");
+        }
+        else{
+            System.out.println("学号\t\t\t姓名\t\t年龄\t\t居住地");;
+            for(int i=0;i<array.size();i++){
+                Student s = array.get(i);
+                System.out.println(s.getNum()+"\t"+s.getName()+"\t\t"+s.getAge()+"\t\t"+s.getAddress());
+            }
+        }
+    }
