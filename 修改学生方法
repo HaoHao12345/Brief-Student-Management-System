@@ -1,0 +1,38 @@
+    public static void modifyStudent(ArrayList<Student> array){
+        Scanner sc = new Scanner(System.in);
+        // 录入待修改的学生的学号
+        System.out.print("请输入待修改的学生的学号：");
+        String num1 = sc.nextLine();
+        // 循环判断变量——若遍历完毕后仍未找到对于学号则为false
+        boolean flag = false;
+        // 遍历集合对象，找到输入学号对应的学生
+        for(int i=0;i<array.size();i++){
+            flag = false;
+            Student ss = array.get(i);
+            if(num1.equals(ss.getNum())){
+                // 录入修改后的学号
+                System.out.print("请输入修改后的学生的学号");
+                String num2 = sc.nextLine();
+                ss.setNum(num2);
+                // 录入修改后的姓名
+                System.out.print("请输入修改后的学生的姓名：");
+                String name = sc.nextLine();
+                ss.setName(name);
+                // 录入修改后的年龄
+                System.out.print("请输入修改后的学生的年龄：");
+                String age = sc.nextLine();
+                ss.setAge(age);
+                // 录入修改后的居住地
+                System.out.print("请输入修改后的学生的居住地：");
+                String address = sc.nextLine();
+                ss.setAddress(address);
+                System.out.println("修改成功！");
+                flag = true;
+                break;
+            }
+            if(flag == false){
+                System.out.println("对应学号不存在！");
+            }
+        }
+    }
+}
